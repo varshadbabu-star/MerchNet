@@ -1,0 +1,52 @@
+import * as React from "react"
+
+export interface ToastProps {
+  id: string
+  title?: string
+  description?: string
+  action?: React.ReactNode
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+}
+
+export const Toast = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <div
+      ref={ref}
+      className={className}
+      {...props}
+    />
+  )
+})
+Toast.displayName = "Toast"
+
+export const ToastTitle = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <div
+      ref={ref}
+      className={className}
+      {...props}
+    />
+  )
+})
+ToastTitle.displayName = "ToastTitle"
+
+export const ToastDescription = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <div
+      ref={ref}
+      className={className}
+      {...props}
+    />
+  )
+})
+ToastDescription.displayName = "ToastDescription"
