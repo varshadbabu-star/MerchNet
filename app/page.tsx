@@ -15,7 +15,10 @@ import {
   IndianRupee,
   Activity,
   Target,
-  Zap
+  Zap,
+  PackageSearch,
+  Cctv,
+  ShieldAlert
 } from 'lucide-react'
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -117,6 +120,20 @@ export default function Dashboard() {
       icon: Calculator,
       href: '/tax',
       color: 'bg-gradient-to-r from-yellow-500 to-orange-600'
+    },
+    {
+      title: 'Inventory',
+      description: 'Track stock and warehouse capacity',
+      icon: PackageSearch,
+      href: '/inventory',
+      color: 'bg-gradient-to-r from-indigo-500 to-blue-600'
+    },
+    {
+      title: 'CCTV Security',
+      description: 'AI Theft detection & live feeds',
+      icon: Cctv,
+      href: '/cctv',
+      color: 'bg-gradient-to-r from-red-500 to-rose-600'
     }
   ]
 
@@ -184,9 +201,10 @@ export default function Dashboard() {
             </div>
             <nav className="flex space-x-6">
               <Link href="/billing" className="text-gray-600 hover:text-gray-900 transition-colors">Billing</Link>
+              <Link href="/inventory" className="text-gray-600 hover:text-gray-900 transition-colors">Inventory</Link>
               <Link href="/products" className="text-gray-600 hover:text-gray-900 transition-colors">Products</Link>
               <Link href="/sales" className="text-gray-600 hover:text-gray-900 transition-colors">Sales</Link>
-              <Link href="/customers" className="text-gray-600 hover:text-gray-900 transition-colors">Customers</Link>
+              <Link href="/cctv" className="text-gray-600 hover:text-gray-900 transition-colors">CCTV Security</Link>
               <Link href="/invoices" className="text-gray-600 hover:text-gray-900 transition-colors">Invoices</Link>
             </nav>
           </div>
